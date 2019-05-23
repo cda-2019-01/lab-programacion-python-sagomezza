@@ -17,3 +17,14 @@
 ## ('9', ['A', 'B', 'C', 'E'])
 ##
 ##
+csv = open('data.csv', 'r').readlines()
+csv = [z.replace('\t', ' ') for z in csv]
+csv = [z.replace('\n', ' ') for z in csv]
+csv = [z.split(',') for z in csv]
+a = [z[0].split(' ') for z in csv[0:]]
+b = []
+[b.append(z[1]) for z in a]
+uniquenums = sorted(list(set(b)))
+def getLetters(potato):
+    return [(row[0]) for row in a  if row[1] == potato ]
+[print((num, getLetters(num))) for num in uniquenums]
