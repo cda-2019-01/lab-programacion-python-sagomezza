@@ -11,3 +11,9 @@
 ## E,2,3
 ## E,3,3
 ##
+csv = open('data.csv', 'r').readlines()
+csv = [z.replace('\t', ' ') for z in csv]
+csv = [z.replace('\n', '') for z in csv]
+csv = [z.split(' ') for z in csv]
+a = [[z[0], len(z[3].split(',')), len(z[4].split(','))] for z in csv]
+[print(z[0],z[1],z[2], sep=',') for z in a]
