@@ -27,4 +27,4 @@ b = []
 uniquenums = sorted(list(set(b)))
 def getLetters(potato):
     return [(row[0]) for row in a  if row[1] == potato ]
-[print((num, getLetters(num))) for num in uniquenums]
+[print((num, sorted(set(getLetters(num))))) for num in uniquenums]

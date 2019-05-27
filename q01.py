@@ -8,4 +8,4 @@ csv = [z.split(',') for z in csv]
 a = [z[0].split(' ') for z in csv[0:]]
 b = []
 [b.append(int(z[1])) for z in a]
-print(str(sum(b)), '\n')
+print(str(sum(b)))
